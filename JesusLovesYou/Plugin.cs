@@ -171,19 +171,21 @@ namespace JesusLovesYou
             "The city does not need the sun or the moon to shine on it, for the glory of God gives it light, and the Lamb is its lamp. - Revelation 21:23",
             "Then the angel showed me the river of the water of life, as clear as crystal, flowing from the throne of God and of the Lamb. - Revelation 22:1",
             "No longer will there be any curse. The throne of God and of the Lamb will be in the city, and his servants will serve him. - Revelation 22:3",
+            "But I say to you who are listening: Love your enemies, do good to those who hate you - Luke 6:27",
+            "No weapon formed against you shall prosper, and every tongue that rises against you in judgment you shall condemn. This is the heritage of the servants of the Lord, and their righteousness is from me, says the Lord - Isaiah 54:17",
         };
         private int index;
 
         void Start()
         {
             //GorillaTagger.OnPlayerSpawned(OnGameInitialized);
-            // realized i needed to put the references to objects here and not in the other thing im so dumb holy shit :sob:
+            // realized i needed to put the references to objects here and not in the other thing
             motdtext = GameObject.Find("motdBodyText");
             motdlabel = GameObject.Find("motdHeadingText");
 
             index = indexget();
 
-            // dont get in our way fuckass playfab (i have no idea if its legal to do that)
+            //(i have no idea if its legal to do that)
             motdtext.GetComponent<PlayFabTitleDataTextDisplay>().enabled = false;
 
             motdtext.GetComponent<TextMeshPro>().text = bibleVerses[index];
@@ -200,13 +202,13 @@ namespace JesusLovesYou
 
         void OnGameInitialized()
         {
-            // realized i needed to put the references to objects here and not in the other thing im so dumb holy shit :sob:
+            // realized i needed to put the references to objects here and not in the other thing
             motdtext = GameObject.Find("motdBodyText");
             motdlabel = GameObject.Find("motdHeadingText");
 
             index = indexget();
 
-            // dont get in our way fuckass playfab (i have no idea if its legal to do that)
+            //(i have no idea if its legal to do that)
             motdtext.GetComponent<PlayFabTitleDataTextDisplay>().enabled = false;
 
             motdtext.GetComponent<TextMeshPro>().text = bibleVerses[index];
@@ -217,3 +219,4 @@ namespace JesusLovesYou
         }
     }
 }
+
